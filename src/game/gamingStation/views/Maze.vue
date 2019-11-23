@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Maze</h1>
-    <div class="grid" v-for="(line, index) in this.lines" v-bind:key="line">
+    <div class="grid" v-for="(line, index) in this.lines" v-bind:key="index">
       <row :boxList="line[index]"></row>
     </div>
   </div>
@@ -17,8 +17,7 @@ export default {
   },
   data: () => ({
     lines: [],
-    mode: '',
-    firstIndex: 0
+    mode: ''
   }),
   async created() {
     try {

@@ -3,14 +3,16 @@
     <div v-for="(label, index) in list" v-bind:key="index">
       <div>
         <span>
-          <slot></slot>
+          <span>
+            <slot></slot>
+          </span>
           <span class="label">
             {{ label }}
           </span>
         </span>
-      </div>
-      <div class="element">
-        <div class="outline" />
+        <div class="element">
+          <div class="outline" />
+        </div>
       </div>
     </div>
   </div>
