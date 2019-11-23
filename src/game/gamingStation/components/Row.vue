@@ -9,6 +9,8 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 export default {
   name: 'Row',
   props: {
@@ -19,7 +21,7 @@ export default {
   },
   methods: {
     getBoxClass(box) {
-      let borders = 'box ';
+      let borders = this.mode + ' ';
       if (!box.top) {
         borders = borders + 'up ';
       }
@@ -37,6 +39,9 @@ export default {
       }
       return borders;
     }
+  },
+  computed: {
+    ...mapGetters('game', ['mode'])
   }
 };
 </script>

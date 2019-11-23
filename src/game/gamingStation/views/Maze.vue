@@ -12,14 +12,14 @@
 <script>
 import * as mazeApi from '@/api/mazeApi';
 import Row from '../components/Row';
+import { mapActions, mapGetters } from 'vuex';
 
 export default {
   components: {
     Row
   },
   data: () => ({
-    lines: [],
-    mode: 'beginner'
+    lines: []
   }),
   async created() {
     try {
@@ -41,10 +41,20 @@ export default {
       for (let i = 0; i < loopLength; i++) {
         for (let j = 0; j < loopLength; j++) {
           let cell = document.createElement('div');
-          cell.className = 'box';
+          cell.className = this.mode;
         }
       }
-    }
+      console.log(loopLength);
+    },
+    chooseMode(mode) {
+      this.setMode(mode);
+    },
+    ...mapActions('game', {
+      setMode: 'setMode'
+    })
+  },
+  computed: {
+    ...mapGetters('game', ['mode'])
   }
 };
 </script>

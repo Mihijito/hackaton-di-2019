@@ -1,21 +1,19 @@
-.box {
+.beginner {
   border: 2px solid white;
   width: 3em;
   height: 3em;
   background-color: white;
 }
 
-.box-advanced {
+.advanced {
   border: 2px solid white;
-  width: 2.5em;
-  height: 2.5em;
+  width: 2em;
+  height: 2em;
   background-color: white;
 }
 
 .row {
   display: flex;
-  width: 100%;
-  margin: auto;
 }
 
 .up {
