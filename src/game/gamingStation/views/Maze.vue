@@ -1,8 +1,10 @@
 <template>
   <div>
     <h1>Maze</h1>
-    <div class="grid" v-for="(line, index) in this.lines" v-bind:key="index">
-      <row :boxList="line[index]"></row>
+    <div class="grid">
+      <div v-for="(line, index) in this.lines" v-bind:key="index">
+        <row :boxList="line"></row>
+      </div>
     </div>
   </div>
 </template>
@@ -17,21 +19,23 @@ export default {
   },
   data: () => ({
     lines: [],
-    mode: ''
+    mode: 'beginner'
   }),
   async created() {
     try {
-      this.lines = await mazeApi.fetchMaze();
+      this.lines = await mazeApi.fetchMaze(this.mode);
       this.generateMaze(this.mode);
     } catch (e) {
       alert(e);
     }
   },
   methods: {
-    generateMaze(mode) {
+    generateMaze(modeMaze) {
       let loopLength;
-      if (mode === 'beginner') {
+      if (modeMaze === 'beginner') {
         loopLength = 5;
+      } else if (modeMaze === 'advanced') {
+        loopLength = 16;
       }
 
       for (let i = 0; i < loopLength; i++) {
@@ -44,3 +48,7 @@ export default {
   }
 };
 </script>
+
+<style>
+@import '../css/Maze.css';
+</style>
