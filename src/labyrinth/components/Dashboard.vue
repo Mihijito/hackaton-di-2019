@@ -1,16 +1,20 @@
 <template>
   <div class="dashboard">
-    Whatup
+    <command-display></command-display>
   </div>
 </template>
 
 <script>
+import CommandDisplay from '../components/CommandsDisplay';
+
 export default {
-  name: 'Dashboard'
+  name: 'Dashboard',
+  components: {
+    CommandDisplay
+  }
 };
 </script>
 
 <style>
-@import '../scss/Dashboard.scss';
-@import '/src/scss/Variables.scss';
+@import '../scss/Dashboard.css';
 </style>
