@@ -1,23 +1,30 @@
 <template>
   <div class="player-display">
-    <div>
-      Hughes Soarezz
-    </div>
-    <div>
-      Justin Audet
-    </div>
-    <div>
-      Tristan Ortiz
-    </div>
+    <liste-displayer :list="this.players">
+      <i class="fas fa-user"></i>
+    </liste-displayer>
   </div>
 </template>
 
 <script>
+import ListeDisplayer from '@/globalComponents/listDisplayer/views/ListDisplayer';
+
 export default {
-  name: 'OnlinePlayerDisplay'
+  name: 'OnlinePlayerDisplay',
+  components: {
+    ListeDisplayer
+  },
+  data: () => ({
+    players: [
+      'Hughes Soares',
+      'Tristan Ortiz',
+      'Justin Audet',
+      'Olivier Gamache'
+    ]
+  })
 };
 </script>
 
 <style>
-@import '../scss/OnlinePlayerDisplay.css';
+@import '../css/OnlinePlayerDisplay.css';
 </style>

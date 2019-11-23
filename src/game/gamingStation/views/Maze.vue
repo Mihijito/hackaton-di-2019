@@ -1,10 +1,8 @@
 <template>
   <div>
     <h1>Maze</h1>
-    <div>
-      <v-for value in values>
-        {value}
-      </v-for>
+    <div v-for="value in values" v-bind:key="value">
+      {value}
     </div>
   </div>
 </template>
