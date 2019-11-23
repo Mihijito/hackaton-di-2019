@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Maze</h1>
+    <h1 class="maze-presentation">Maze</h1>
     <div class="grid">
       <div v-for="(line, index) in this.lines" v-bind:key="index">
         <row :boxList="line"></row>

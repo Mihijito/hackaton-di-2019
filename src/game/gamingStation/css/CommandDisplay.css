@@ -2,7 +2,7 @@
   display: inline;
   justify-content: center;
   align-content: left;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .command {
@@ -12,6 +12,6 @@
 
 .container {
   background-color: #ffedcf;
-  padding: 2em;
+  padding: 1em;
   border-radius: 10px;
 }

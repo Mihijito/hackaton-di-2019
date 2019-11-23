@@ -1,14 +1,14 @@
 .beginner {
   border: 2px solid whitesmoke;
-  width: 3em;
-  height: 3em;
+  width: 2em;
+  height: 2em;
   background-color: whitesmoke;
 }
 
 .advanced {
   border: 2px solid whitesmoke;
-  width: 2em;
-  height: 2em;
+  width: 1em;
+  height: 1em;
   background-color: whitesmoke;
 }
 
