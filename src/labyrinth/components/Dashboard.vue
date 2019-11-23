@@ -1,24 +1,29 @@
 <template>
   <div class="dashboard">
-    Whatsup
+    <div>Whatsup</div>
     <p id="demo"></p>
-    <button onclick="lookUpDb()">BD call</button>
+    <button id="addStar" v-on:click="addStar">BD call</button>
+    <command-display></command-display>
   </div>
 </template>
 
 <script>
-import * as firebase from "firebase/app";
-
-import "firebase/auth";
-import "firebase/firestore";
+import CommandDisplay from '../components/CommandsDisplay';
+import Firebase from '../components/firebase/firebase';
 
 export default {
-  name: 'Dashboard'
+  name: 'Dashboard',
+  components: {
+    CommandDisplay
+  },
+  methods: {
+    addStar() {
+      Firebase.addStar();
+    }
+  }
 };
-
 </script>
 
 <style>
-@import '../scss/Dashboard.scss';
-@import '/src/scss/Variables.scss';
+@import '../scss/Dashboard.css';
 </style>

@@ -1,0 +1,14 @@
+.command-display {
+  display: inline;
+  justify-content: center;
+  align-content: left;
+  font-size: 2em;
+}
+
+.command {
+  width: 100%;
+}
+
+.command {
+  diplay: flex;
+}
