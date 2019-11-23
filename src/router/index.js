@@ -1,20 +1,11 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Labyrinth from '../labyrinth/views/Labyrinth.vue';
 import Lost from '../views/Lost.vue';
 import { hasToken } from '../authentication/authTokenTools';
 
 Vue.use(VueRouter);
 
 const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: Labyrinth,
-    meta: {
-      requiresAuth: true
-    }
-  },
   {
     path: '/signin',
     name: 'signin',
