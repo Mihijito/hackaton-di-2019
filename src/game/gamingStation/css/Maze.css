@@ -1,0 +1,10 @@
+.box {
+  display: flex;
+  border: 2px solid black;
+  swidth: 1em;
+  height: 1em;
+}
+
+.grid {
+  display: flex;
+}
