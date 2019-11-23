@@ -10,6 +10,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 @import '../scss/Dashboard.scss';
+@import '/src/scss/Variables.scss';
 </style>
