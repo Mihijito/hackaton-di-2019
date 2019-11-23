@@ -1,15 +1,15 @@
 .beginner {
-  border: 2px solid white;
+  border: 2px solid whitesmoke;
   width: 3em;
   height: 3em;
-  background-color: white;
+  background-color: whitesmoke;
 }
 
 .advanced {
-  border: 2px solid white;
+  border: 2px solid whitesmoke;
   width: 2em;
   height: 2em;
-  background-color: white;
+  background-color: whitesmoke;
 }
 
 .row {
@@ -19,17 +19,17 @@
 }
 
 .up {
-  border-top: 2px solid black;
+  border-top: 2px solid darkslategrey;
 }
 
 .left {
-  border-left: 2px solid black;
+  border-left: 2px solid darkslategrey;
 }
 
 .right {
-  border-right: 2px solid black;
+  border-right: 2px solid darkslategrey;
 }
 
 .down {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid darkslategrey;
 }

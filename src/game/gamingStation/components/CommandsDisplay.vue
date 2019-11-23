@@ -7,7 +7,7 @@
         </div>
         <i class="fas fa-arrow-up"></i>
       </div>
-      <div class="command">
+      <div class="command bad-practice">
         <div>
           LEFT
           <i class="fas fa-arrow-left"></i>

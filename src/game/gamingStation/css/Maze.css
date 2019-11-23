@@ -1,4 +1,13 @@
 .grid {
   justify-content: center;
   align-content: center;
+  padding: 2em;
+}
+
+.button-mode {
+  border: none;
+  padding: 1em;
+  background-color: lightgray;
+  margin-bottom: 2em;
+  border-radius: 5px;
 }

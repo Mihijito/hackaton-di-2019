@@ -6,9 +6,9 @@
         <row :boxList="line"></row>
       </div>
     </div>
-    <div class="button-mode">
-      <button @click="chooseMode">
-        {{ this.mode }}
+    <div>
+      <button class="button-mode" @click="chooseMode">
+        Maze Level: {{ this.mode }}
       </button>
     </div>
   </div>
@@ -60,8 +60,8 @@ export default {
         this.setMode(this.beginner);
       }
 
-      this.lines = await mazeApi.fetchMaze(this.mode);
       this.generateMaze(this.mode);
+      this.lines = await mazeApi.fetchMaze(this.mode);
       this.switchMode = !this.switchMode;
     },
     ...mapActions('game', ['setMode'])
