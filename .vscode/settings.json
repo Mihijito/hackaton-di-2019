@@ -1,0 +1,20 @@
+{
+  "editor.autoIndent": true,
+  "editor.detectIndentation": false,
+  "editor.formatOnSave": true,
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "prettier.singleQuote": true,
+  "vetur.format.defaultFormatter.html": "prettier",
+  "vetur.format.defaultFormatterOptions": {
+    "prettier": {
+      "singleQuote": true
+    }
+  },
+  "eslint.validate": [
+    { "language": "vue", "autoFix": true },
+    { "language": "html", "autoFix": true },
+    { "language": "javascript", "autoFix": true }
+  ],
+  "eslint.autoFixOnSave": true
+}
