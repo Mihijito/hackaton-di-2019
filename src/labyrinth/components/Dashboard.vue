@@ -11,5 +11,5 @@ export default {
 </script>
 
 <style scoped>
-@import '../views/Dashboard.scss';
+@import '../scss/Dashboard.scss';
 </style>

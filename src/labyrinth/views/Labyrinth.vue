@@ -8,8 +8,13 @@
 </template>
 
 <script>
+import Dashboard from '../components/Dashboard.vue';
+
 export default {
-  name: 'Labyrinth'
+  name: 'Labyrinth',
+  components: {
+    Dashboard
+  }
 };
 </script>
 
