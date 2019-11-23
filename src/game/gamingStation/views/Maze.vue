@@ -6,20 +6,28 @@
         <row :boxList="line"></row>
       </div>
     </div>
+    <div class="button-mode">
+      <button @click="chooseMode">
+        {{ this.mode }}
+      </button>
+    </div>
   </div>
 </template>
 
 <script>
 import * as mazeApi from '@/api/mazeApi';
 import Row from '../components/Row';
-import { mapActions, mapGetters } from 'vuex';
+import { mapGetters, mapActions } from 'vuex';
 
 export default {
   components: {
     Row
   },
   data: () => ({
-    lines: []
+    lines: [],
+    beginner: 'beginner',
+    advanced: 'advanced',
+    switchMode: false
   }),
   async created() {
     try {
@@ -44,14 +52,19 @@ export default {
           cell.className = this.mode;
         }
       }
-      console.log(loopLength);
     },
-    chooseMode(mode) {
-      this.setMode(mode);
+    async chooseMode() {
+      if (this.switchMode) {
+        this.setMode(this.advanced);
+      } else {
+        this.setMode(this.beginner);
+      }
+
+      this.lines = await mazeApi.fetchMaze(this.mode);
+      this.generateMaze(this.mode);
+      this.switchMode = !this.switchMode;
     },
-    ...mapActions('game', {
-      setMode: 'setMode'
-    })
+    ...mapActions('game', ['setMode'])
   },
   computed: {
     ...mapGetters('game', ['mode'])

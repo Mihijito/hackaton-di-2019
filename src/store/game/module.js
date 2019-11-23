@@ -12,7 +12,7 @@ export default {
   },
   mutations: {
     setMode: (state, mode) => {
-      state.mode = mode;
+      state.game.mode = mode;
     }
   },
   actions: {
