@@ -35,5 +35,5 @@ export default {
 </script>
 
 <style>
-@import '../scss/CommandDisplay.css';
+@import '../css/CommandDisplay.css';
 </style>

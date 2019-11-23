@@ -1,0 +1,8 @@
+.element {
+  width: 100%;
+  padding: 0.25em 0 1em 0;
+}
+
+.outline {
+  border-bottom: 1px solid #aaa;
+}

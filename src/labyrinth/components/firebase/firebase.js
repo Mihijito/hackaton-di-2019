@@ -5,14 +5,7 @@ import 'firebase/firestore';
 import 'firebase/database';
 
 export default {
-  name: 'Firebase',
-  methods: {
-    addStar() {
-      var updates = {};
-      updates['user/userId/starCount'] = starCountNumber++;
-      return database.ref().update(updates);
-    }
-  }
+  name: 'Firebase'
 };
 
 const firebaseConfig = {
@@ -36,11 +29,18 @@ database.ref('users/' + 'userId').set({
 });
 export var starCountNumber;
 
-var starCountRef = firebase.database().ref('users/userId/starCount');
+var starCountRef = firebase.database().ref('user/userId/starCount');
 starCountRef.on('value', function(snapshot) {
   updateStarCount(snapshot.val());
 });
 
 function updateStarCount(value) {
   starCountNumber = value;
+}
+
+export function addStar() {
+  console.log('this is called');
+  var updates = {};
+  updates['user/userId/starCount'] = starCountRef.snapshot.val();
+  return database.ref().update(updates);
 }
