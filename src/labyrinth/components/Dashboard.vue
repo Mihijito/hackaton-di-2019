@@ -1,13 +1,21 @@
 <template>
   <div class="dashboard">
-    Whatup
+    Whatsup
+    <p id="demo"></p>
+    <button onclick="lookUpDb()">BD call</button>
   </div>
 </template>
 
 <script>
+import * as firebase from "firebase/app";
+
+import "firebase/auth";
+import "firebase/firestore";
+
 export default {
   name: 'Dashboard'
 };
+
 </script>
 
 <style>
