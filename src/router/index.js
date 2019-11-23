@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Labyrinth from '../labyrinth/views/Labyrinth.vue';
+import GamingStation from '../game/gamingStation/views/GamingStation.vue';
 import Lost from '../views/Lost.vue';
 import { hasToken } from '../authentication/authTokenTools';
 
@@ -10,7 +10,7 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: Labyrinth,
+    component: GamingStation,
     meta: {
       requiresAuth: true
     }

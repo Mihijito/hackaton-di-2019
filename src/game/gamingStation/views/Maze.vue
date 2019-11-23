@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import * as api from '../../api/labyrinthApi';
+import * as api from '@/api/labyrinthApi';
 
 export default {
   data: () => ({
