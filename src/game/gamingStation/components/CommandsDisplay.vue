@@ -1,13 +1,13 @@
 <template>
   <div class="container">
     <div class="command-display">
-      <div class="command">
+      <div>
         <div>
           UP
         </div>
         <i class="fas fa-arrow-up"></i>
       </div>
-      <div class="command bad-practice">
+      <div class="command">
         <div>
           LEFT
           <i class="fas fa-arrow-left"></i>
@@ -18,7 +18,7 @@
           RIGHT
         </div>
       </div>
-      <div class="command">
+      <div>
         <i class="fas fa-arrow-down"></i>
         <div>
           DOWN

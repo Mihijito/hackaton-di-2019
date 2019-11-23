@@ -7,10 +7,7 @@
 
 .command {
   width: 100%;
-}
-
-.bad-practice {
-  padding: 0.5em 0 0.5em 0.25em;
+  padding: 0.5em 0 0.5em 0;
 }
 
 .container {
